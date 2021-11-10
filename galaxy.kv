@@ -1,0 +1,64 @@
+#:kivy 2.1.0
+#:import menu menu
+
+MainWidget:
+
+<MainWidget>:
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: "images/bg1.jpg"
+    menu_widget: menu_widget
+    perspective_point_x: self.width/2
+    perspective_point_y: self.height * 0.75
+    MenuWidget:
+        id: menu_widget
+    
+    Label:
+        text: root.score_txt
+        font_size: dp(20)
+        font_name: "fonts/Eurostile.ttf"
+        size_hint: .1, .1
+        pos_hint: {"x": 0.01, "top": 1}
+        text_size: self.size
+        halign: "left"
+        valign: "center"
+        color: 1, 0, 1, 1
+        
+  
+    Label:
+        text: root.max_score_txt
+        font_size: dp(20)
+        font_name: "fonts/Eurostile.ttf"
+        size_hint: .1, .1
+        pos_hint: {"x": .01, "top": .15}
+        text_size: self.size
+        halign: "left"
+        valign: "center"
+        color: 1, 0, 1, 1
+
+    Label:
+        text: "@douglas-mora"
+        font_size: dp(14)
+        font_name: "fonts/Eurostile.ttf"
+        size_hint: .1, .1
+        pos_hint: {"x": .9, "top": .15}
+        text_size: self.size
+        halign: "left"
+        valign: "center"
+        color: 1, 1, 1, 1
+        
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
